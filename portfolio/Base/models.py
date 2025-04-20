@@ -13,7 +13,7 @@ class Contact(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name="Назва проекту")
     description = models.TextField(verbose_name="Опис проекту")
-    image = models.ImageField(upload_to='projects/', verbose_name="Зображення проекту")
+    image = models.URLField(verbose_name="URL зображення проекту")
     github_link = models.URLField(blank=True, null=True, verbose_name="Посилання на GitHub")
     live_link = models.URLField(blank=True, null=True, verbose_name="Посилання на живий проект")
     order = models.IntegerField(default=0, verbose_name="Порядок відображення")
